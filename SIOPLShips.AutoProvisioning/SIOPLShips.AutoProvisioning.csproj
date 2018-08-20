@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D17BCF8-986D-41FC-A975-2FC6FDC49CCB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SIOPLShips.AutoProvisioning</RootNamespace>
+    <AssemblyName>SIOPLShips.AutoProvisioning</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SIOPLShips.AutoProvisioning.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>App.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIOPLShips.CloudBridge.Linux\SIOPLShips.CloudBridge.Linux.csproj">
+      <Project>{85c7fb5f-8055-4a05-b9dd-d187b381ea25}</Project>
+      <Name>SIOPLShips.CloudBridge.Linux</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.CloudBridge.Windows\SIOPLShips.CloudBridge.Windows.csproj">
+      <Project>{0a63ee60-5d8e-42cb-b930-cd5042631e47}</Project>
+      <Name>SIOPLShips.CloudBridge.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.CloudBridge\SIOPLShips.CloudBridge.csproj">
+      <Project>{47690cfd-af52-4ed1-915f-43fcab8f1cdf}</Project>
+      <Name>SIOPLShips.CloudBridge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.CommonLibrary\SIOPLShips.CommonLibrary.csproj">
+      <Project>{59cc5729-4521-4a06-8b62-2a8d2e885a02}</Project>
+      <Name>SIOPLShips.CommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.EdgeService.Linux\SIOPLShips.EdgeService.Linux.csproj">
+      <Project>{d8ffd7e1-7ccf-43c4-b23a-6eb2d893c1e9}</Project>
+      <Name>SIOPLShips.EdgeService.Linux</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.EdgeService.Windows\SIOPLShips.EdgeService.Windows.csproj">
+      <Project>{7da4f614-41c2-4c54-81d3-670861913149}</Project>
+      <Name>SIOPLShips.EdgeService.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.EdgeService\SIOPLShips.EdgeService.csproj">
+      <Project>{731b5962-aefa-4c07-944d-c39ede49b859}</Project>
+      <Name>SIOPLShips.EdgeService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.Networking\SIOPLShips.Networking.csproj">
+      <Project>{7365de55-a13b-4a2a-b5e5-788618eba614}</Project>
+      <Name>SIOPLShips.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SIOPLShips.OperatorScreen\SIOPLShips.OperatorScreen.csproj">
+      <Project>{cfa9859f-ddff-43b4-a35c-dc7f8af24d7b}</Project>
+      <Name>SIOPLShips.OperatorScreen</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
