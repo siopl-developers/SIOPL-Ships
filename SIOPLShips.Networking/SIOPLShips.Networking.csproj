@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IBroadcastChannel.cs" />
+    <Compile Include="Interfaces\IChannel.cs" />
+    <Compile Include="Interfaces\IQueryChannel.cs" />
+    <Compile Include="Interfaces\IReadOnlyChannel.cs" />
+    <Compile Include="Interfaces\ISerialPortChannel.cs" />
+    <Compile Include="Interfaces\ITcpChannel.cs" />
+    <Compile Include="Interfaces\IWriteOnlyChannel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
